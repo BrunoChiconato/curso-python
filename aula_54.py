@@ -28,7 +28,7 @@ try:
 except:
     print(f"'{num}' não é um número inteiro.")
 
-# Exercício 2
+# # Exercício 2
 time = input("Que horas são? (Escreva apenas a hora) ")
 
 try:
@@ -48,7 +48,7 @@ except:
 first_name = input("Insira seu nome: ")
 
 try:
-    if not isinstance(first_name, str):
+    if any(letter.isdigit() for letter in first_name) or first_name.isspace() or not first_name:
         raise Exception
     if len(first_name) <= 4:
         print("Seu nome é curto")
